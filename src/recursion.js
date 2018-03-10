@@ -61,6 +61,17 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+  if (n >= 0) {
+    if (n === 0) {
+  	  return true;
+    } else if (n < 2) {
+  	  return false;
+    } else {
+  	  return isEven(n - 2);
+    }
+  } else if (n < 0) {
+  	return isEven(-n);
+  }
 };
 
 // 5. Sum all integers below a given integer.
